@@ -16,7 +16,6 @@ export const symmetricDecrypt = (message: string, key: Buffer, iv: Buffer): stri
   return decrypted;
 };
 
-/** Symmetric encryption using algorithm AES-256-GCM with key and iv */
 export const symmetricEncrypt2 = (message: string): string => {
   const key = randomBytes(32);
   const iv = randomBytes(16);
@@ -26,7 +25,6 @@ export const symmetricEncrypt2 = (message: string): string => {
   return key.toString("base64url") + ":" + iv.toString("base64url") + ":" + encrypted;
 };
 
-/** Symmetric decryption using algorithm AES-256-GCM with key and iv */
 export const symmetricDecrypt2 = (message: string): string => {
   const [key, iv, encrypted] = message.split(":");
   const decipher = createDecipheriv("aes-256-cbc", Buffer.from(key, "base64url"), Buffer.from(iv, "base64url"));
