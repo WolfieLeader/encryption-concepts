@@ -1,0 +1,26 @@
+{
+  "name": "crypto-concepts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/index.js",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc --project tsconfig.build.json"
+  },
+  "keywords": [
+    "crypto",
+    "blockchain",
+    "nodejs",
+    "typescript"
+  ],
+  "author": "WolfieLeader",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.7.6",
+    "@types/prompt-sync": "^4.1.1",
+    "prompt-sync": "^4.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
